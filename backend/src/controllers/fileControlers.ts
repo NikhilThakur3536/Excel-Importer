@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import Record from '../models/DataModels';
-import { parseAndValidateExcel } from '../utils/fileprocessor';
+import { parseAndValidateExcel } from '../utils/fileProcessor';
 import fs from 'fs';
 
 export async function uploadFile(req: Request, res: Response): Promise<void> { // Explicitly return void
