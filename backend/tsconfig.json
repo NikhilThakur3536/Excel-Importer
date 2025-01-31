@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES6",                          // Transpile to ES6
+    "module": "commonjs",                      // Use CommonJS modules
+    "outDir": "./dist",                        // Output the compiled files to dist/
+    "rootDir": "./src",                        // The root directory for TypeScript files
+    "esModuleInterop": true,                   // Allow interop with CommonJS modules
+    "skipLibCheck": true,                      // Skip checking of library files
+    "forceConsistentCasingInFileNames": true   // Ensure consistent casing in imports
+  },
+  "include": [
+    "src/**/*.ts"  // Include all .ts files in the src folder
+  ],
+  "exclude": [
+    "node_modules",  // Exclude node_modules directory
+    "**/*.spec.ts"   // Optionally exclude test files
+  ]
+}
