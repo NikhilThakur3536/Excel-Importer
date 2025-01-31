@@ -26,7 +26,7 @@ export const uploadFile = async (file: File): Promise<string> => {
         return `❌ Upload failed: ${errorMessages}`;
       }
     } catch (error) {
-      console.error("Network error during file upload:", error);
+      console.error("Network error during file upload is:", error);
       return "❌ Error uploading file. Please check your internet connection.";
     }
   };
