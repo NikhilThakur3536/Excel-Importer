@@ -44,7 +44,7 @@ export async function parseAndValidateExcel(filePath: string): Promise<ParsedDat
 
       if (errors.length === 0) {
         records.push({ name, amount, date: new Date(date), verified });
-      }
+      } 
     });
   });
 
