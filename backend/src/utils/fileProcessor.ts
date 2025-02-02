@@ -18,8 +18,8 @@ export async function parseAndValidateExcel(filePath: string): Promise<ParsedDat
   const workbook = new Workbook();
   await workbook.xlsx.readFile(filePath);
   const sheets = workbook.worksheets.map(sheet => sheet.name);
-  const errors: ValidationError[] = [];
-  const records: any[] = [];
+  const errors= [];
+  const records= [];
 
   workbook.worksheets.forEach(sheet => {
     sheet.eachRow((row, rowNumber) => {

@@ -2,7 +2,7 @@ import folder from "../assets/folder.png";
 import { useFileUpload } from "../hooks/useFileUpload";
 
 export const FileUpload: React.FC = () => {
-  const { fileName, isVisible, handleFileChange, handleUpload, uploadMessage } =
+  const { fileName, isVisible, handleFileChange, handleUpload, uploadMessage,isUploaded } =
     useFileUpload();
 
   return (
@@ -33,7 +33,7 @@ export const FileUpload: React.FC = () => {
           className={`absolute opacity-0 cursor-pointer ${isVisible ? "hidden" : ""}`}
         />
 
-        {isVisible && fileName && (
+        {isVisible && fileName && !isUploaded && (
           <div className="flex flex-col items-center mt-4">
             <p className="text-lg font-semibold text-gray-700">{fileName}</p>
             <button

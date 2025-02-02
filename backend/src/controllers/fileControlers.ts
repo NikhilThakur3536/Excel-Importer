@@ -16,9 +16,6 @@ export async function uploadFile(req: Request, res: Response): Promise<void> { /
     console.log('File path:', req.file.path);
     const { errors, records } = await parseAndValidateExcel(req.file.path);
 
-    // Clean up the uploaded file after processing
-    // fs.unlinkSync(req.file.path);
-
     // Insert records into the database
     const rec= await Record.insertMany(records);
     
